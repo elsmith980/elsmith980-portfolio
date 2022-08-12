@@ -12,8 +12,12 @@ body {
 }
 
 main {
+  z-index:1;
   padding: 5rem 0;
+  margin-top: 50px;
+  margin-bottom: 70px;
   flex: 1;
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +38,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fafafa;
 }
 
 a{
@@ -48,6 +53,10 @@ header{
 }
 
 .nav {
+  z-index:2;
+  border-radius: 10px;
+  color: #212121;;
+  position:relative;
   display: flex;
   padding: 16px;
   justify-content: space-between;
@@ -65,15 +74,16 @@ header{
 .nav__menu-bar div{
   width: 40px;
   height: 4px;
-  background-color: black;
+  background-color: #de5499;
   border-radius: 2px;
 }
 .nav__menu-list{
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
   position: fixed;
   top: 60px;
-  width: 288px;
+  width: 200px;
   row-gap: 24px;
   right: -288px;
   padding: 24px 16px;
@@ -83,6 +93,7 @@ header{
 }
 .nav__menu-list.active{
   right: 0;
+  top:0;
 }
 .nav__link{
   font-size: 18px; 
@@ -91,6 +102,7 @@ header{
 }
 .nav__link.active {
   font-weight: bold;
+  color: #de5499;
 }
 
 .nav__link:hover{
@@ -122,7 +134,7 @@ header{
     height: 6px;
     bottom: -16px;
     left: 0;
-    background-color: black;
+    background-color: #de5499;
     transition: all 0.2s;
   }
   

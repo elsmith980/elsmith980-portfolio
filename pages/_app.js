@@ -1,10 +1,10 @@
 import '@styles/globals.css'
-import Sidebar from '@components/Sidebar.js';
+import Menu from '@components/Menu';
 
 function Application({ Component, pageProps }) {
   return (
     <>
-      <Sidebar />
+      <Menu />
       <Component {...pageProps} />
     </>
   );
