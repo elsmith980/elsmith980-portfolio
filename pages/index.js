@@ -24,7 +24,7 @@ export default function Home() {
           Computer Engineering Co-op @ UWaterloo
         </h3>
         <body>
-          Just a gal who's really excited about problem solving, coding, and data (among some other things) 
+          Just a gal who's really excited about creative problem solving, coding, and data (among some <a href='/fun' style={{color: '#de5499'}}>other things</a>) 
         </body>
       </main>
 
