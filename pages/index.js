@@ -23,9 +23,9 @@ export default function Home() {
         <h3>
           Computer Engineering Co-op @ UWaterloo
         </h3>
-        <p>
+        <body>
           Just a gal who's really excited about problem solving, coding, and data (among some other things) 
-        </p>
+        </body>
       </main>
 
       <Footer />
