@@ -4,7 +4,7 @@ import Footer from '@components/Footer'
 
 export default function About() {
     return (
-      <div className="container">
+      <div className="page-container">
         <Head>
           <title>Ella Smith</title>
           <link rel="icon" href="/favicon.ico" />
@@ -17,7 +17,6 @@ export default function About() {
           </p>
         </main>
   
-        <Footer />
       </div>
     )
   }
