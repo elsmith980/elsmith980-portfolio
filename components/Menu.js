@@ -6,7 +6,6 @@ export default function Menu() {
 
     const MENU_LIST = [
         { text: "Home", href: "/" },
-        { text: "About", href: "/about" },
         { text: "Work", href: "/work" },
         { text: "Projects", href: "/projects"},
         { text: "Fun", href: "/fun" },
@@ -25,7 +24,7 @@ export default function Menu() {
                         setNavActive(false);
                     }}
                     >
-                        <h1 className="logo">Ella Smith</h1>
+                        <div class="subtitle" className="logo">Ella Smith</div>
                     </a>
                 </Link>
                 <div

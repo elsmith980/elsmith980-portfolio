@@ -6,7 +6,7 @@ export default function About() {
     return (
       <div className="page-container">
         <Head>
-          <title>Ella Smith</title>
+          <title>Ella - For Fun</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
   

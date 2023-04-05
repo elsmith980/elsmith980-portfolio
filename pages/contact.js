@@ -26,9 +26,9 @@ export default function Contact() {
   };
 
     return (
-      <div className="container">
+      <div className="page-container">
         <Head>
-          <title>Ella Smith</title>
+          <title>Ella - Contact</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
   

@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div style={{borderRadius: '300px', overflow: 'hidden', width: '300px', height: '300px', pointerEvents:'none'}}>
+        <div style={{marginBottom: '10%', borderRadius: '300px', overflow: 'hidden', width: '300px', height: '300px', pointerEvents:'none'}}>
           <Image
             src="/headshot.jpg"
             width = "300"
@@ -19,9 +19,9 @@ export default function Home() {
             objectFit = "cover"
           />
         </div>
-        <Header title="Hey, I'm Ella!" />
+        <div class="title">Nice to meet you, I'm Ella!</div>
         <h3> Computer Engineering Co-op @ UWaterloo </h3>
-        <p>Just a gal who's really excited about creative problem solving, coding, and data (among some <a href='/fun' style={{color: '#de5499'}}>other things</a>) </p>
+        <p>Really excited about creative problem solving, coding, and data (among some <a href='/fun' style={{color: '#de5499'}}>other things</a>) </p>
       </main>
     </div>
   )
