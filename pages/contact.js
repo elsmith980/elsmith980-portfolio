@@ -34,44 +34,61 @@ export default function Contact() {
   
         <main>
           <Header title="Let's keep in touch!" />
-          <h3>
-            <a target="_blank" href='https://www.linkedin.com/in/ella-smith980/' style={{padding:'20px'}}>
-              <Image  src="/LI-In-Bug.png"
-                      width = "72.3"
-                      height = "64"
-                      objectFit='cover' />
-            </a>
-            <a target="_blank" href='https://github.com/elsmith980'>
-              <Image  src="/GitHub-Mark-64px.png"
-                        width = "64"
-                        height = "64"
-                        objectFit='cover' />            
-            </a>
-          </h3>
+          <div class="level is-mobile">
+            <figure class="image m-2 is-48x48">
+              <a target="_blank" href='https://www.linkedin.com/in/ella-smith980/'>
+                <Image  src="/linkedinlogo.png"
+                        layout="fill"
+                        objectFit='cover' />
+              </a>
+            </figure>
+            <figure class="image m-2 is-48x48">
+              <a target="_blank" href='https://github.com/elsmith980'>
+                <Image  src="/GitHub-Mark-64px.png"
+                          layout="fill"
+                          objectFit='cover' />            
+              </a>
+            </figure>
+          </div>
 
           <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input
-            id="name"
-            type="text"
-            onChange={e => setName(e.target.value)}
-          />
-          <label htmlFor="email">Email:</label>
-          <input
-            id="email"
-            type="email"
-            onChange={e => setEmail(e.target.value)}
-          />
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            type="text"
-            rows="4"
-            onChange={e => setMessage(e.target.value)}
-          />
-          <button type="submit">Send</button>
+            <label class="label" htmlFor='form-data'>Fill out this form to send me a message :)</label>
+            <div class="field">
+              <div class="control" id="form-data">
+                <input
+                  class="input"
+                  id="name"
+                  placeholder="Name"
+                  type="text"
+                  onChange={e => setName(e.target.value)}
+                />
+              </div>
+            </div>
+            <div class="field">
+              <div class="control" id="form-data">
+                <input
+                  class="input"
+                  id="email"
+                  placeholder="Email"
+                  type="email"
+                  onChange={e => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+            <div class="field">
+              <div class="control" id="form-data">
+                <textarea
+                  class="textarea has-fixed-size"
+                  id="message"
+                  placeholder="Message"
+                  type="text"
+                  rows="6"
+                  onChange={e => setMessage(e.target.value)}
+                />
+              </div>
+            </div>
+            <button class="button is-success is-rounded is-fullwidth" type="submit">Send</button>
           </form>
-          
         </main>        
   
       </div>
