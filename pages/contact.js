@@ -34,7 +34,7 @@ export default function Contact() {
   
         <main>
           <Header title="Let's keep in touch!" />
-          <div class="level is-mobile">
+          <div class="level mx-auto has-text-centered is-mobile">
             <figure class="image m-2 is-48x48">
               <a target="_blank" href='https://www.linkedin.com/in/ella-smith980/'>
                 <Image  src="/linkedinlogo.png"
@@ -42,7 +42,7 @@ export default function Contact() {
                         objectFit='cover' />
               </a>
             </figure>
-            <figure class="image m-2 is-48x48">
+            <figure class="image mx-auto m-2 is-48x48">
               <a target="_blank" href='https://github.com/elsmith980'>
                 <Image  src="/GitHub-Mark-64px.png"
                           layout="fill"
@@ -51,7 +51,7 @@ export default function Contact() {
             </figure>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form style={{alignSelf: 'center'}} onSubmit={handleSubmit}>
             <label class="label" htmlFor='form-data'>Fill out this form to send me a message :)</label>
             <div class="field">
               <div class="control" id="form-data">

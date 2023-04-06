@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div style={{marginBottom: '10%', borderRadius: '300px', overflow: 'hidden', width: '300px', height: '300px', pointerEvents:'none'}}>
+        <div style={{alignSelf: 'center', marginBottom: '2%', borderRadius: '300px', overflow: 'hidden', width: '300px', height: '300px', pointerEvents:'none'}}>
           <Image
             src="/headshot.jpg"
             width = "300"
