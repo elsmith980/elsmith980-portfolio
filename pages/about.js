@@ -5,14 +5,16 @@ import Image from 'next/image'
 import React, { useState } from "react";
 
 const DegreeInfo = () => (
-  <div className="panel-block my-3">
-    <figure className='image is-64x64 is-rounded is-pulled-left'>
+  <div className="panel-block my-4">
+    <figure className='image is-64x64 is-rounded ml-auto mx-2'>
       <Image
+        width="64px"
+        height="64px"
         src="/waterloologo.png"
-        layout="fill"
+        objectFit = "cover"
       />
     </figure>
-    <div className="has-text-centered mx-auto is-pulled-right"> 
+    <div className="has-text-left mr-auto pl-4"> 
         <p className="is-size-6 has-text-weight-bold">Bachelor of Applied Science </p>
         <p className="is-size-6 has-text-weight-bold">Honours Computer Engineering, Co-op</p>
         <p className="is-size-6">University of Waterloo</p>
@@ -23,43 +25,146 @@ const DegreeInfo = () => (
 )
 
 const Courses = () => (
-  <div className="panel-block my-3">
-    Courses 
-  </div>
+  <div className="panel-block mb-3">
+    <table class="table has-text-left is-fullwidth is-narrow is-size-7" style={{backgroundColor: 'transparent', width: '100%', tableLayout:'fixed', height: 'fit-content'}}>
+      <thead>
+        <tr>
+        <th> 
+          Code
+        </th>
+        <th style={{width: '25%'}}>
+          Title
+        </th>
+        <th style={{width: '60%'}}>
+          Content
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            ECE 108, 208
+          </td>
+          <td>
+            Discrete Math and Logic I, II
+          </td>
+          <td>
+            <ul>
+              <li>
+              Predicate, temporal, and relational logic
+              </li>
+              <li>
+              Set, proof, model and graph theory
+              </li>
+              <li>
+                Syntax and semantics, combinatorics
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ECE 224
+          </td>
+          <td>
+          Embedded Microprocessor Systems
+          </td>
+          <td>
+            <ul>
+              <li>
+                Microprocessor system architecture
+              </li>
+              <li>
+                Bus systems, memory systems, peripherals
+              </li>
+              <li>
+                Parallel, serial, and analog interfaces
+              </li>
+              <li>
+                Data transfer, synchronization, error detection/correction
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ECE 250
+          </td>
+          <td>
+            Algorithms and Data Structures
+          </td>
+          <td>
+            <ul>
+              <li>
+                Data structures, abstract data types
+              </li>
+              <li>
+                Recursive algorithms, algorithm analysis, sorting and searching         
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ECE 252
+          </td>
+          <td>
+            Systems Programming and Concurrency
+          </td>
+          <td>
+            <ul>
+              <li>
+                Processes and threads, system calls
+              </li>
+              <li>
+                Concurrency (semaphore, mutex, monitors, and barrier synchronization)
+              </li>
+              <li>
+                User-level memory management
+              </li>
+              <li>
+                Deadlock detection and recovery, file systems
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>  
 )
 
 const Awards = () => (
-  <div className="panel-block my-3">
+  <div className="panel-block my-4">
     Awards
   </div>
 )
 
 const Extracurr = () => (
-  <div className="panel-block my-3">
+  <div className="panel-block my-4">
     Extracurriculars
   </div>
 )
 
 const General = () => (
-  <div className="panel-block my-3">
+  <div className="panel-block my-4">
     General
   </div>
 )
 
 const Languages = () => (
-  <div className="panel-block my-3">
+  <div className="panel-block my-4">
     Languages
   </div>
 )
 
 const Libraries = () => (
-  <div className="panel-block my-3">
+  <div className="panel-block my-4">
     Libraries
   </div>
 )
 
 const Tools = () => (
-  <div className="panel-block my-3">
+  <div className="panel-block my-4">
     Tools
   </div>
 )
@@ -79,7 +184,7 @@ export default function About() {
       
         <main>
           <Header title="About Me 😎" />
-          <div className="is-size-5 block">
+          <div className="is-size-6 block">
             <p>
               💯 Co-op student with a knack for problem solving, learning, and teamwork
             </p>
@@ -87,15 +192,16 @@ export default function About() {
               🌿 Passionate about sustainability and building inclusive tech that improves lives
             </p>
           </div>
-          <div className="columns" style={{minHeight: '300px'}}>
-            <nav className="panel is-warning column is-half mx-2">
+          <div className="columns is-centered is-tablet" >
+            <div className="column is-half-tablet">
+            <nav className="panel is-warning scroll-card ">
               <p className="panel-heading">
                 Education
               </p>
               <p className="panel-tabs">
                 {educationTabs.map((tab) => (
                   <a 
-                    className={`${activeEduTab!=tab ? "" : "is-active has-text-weight-semibold"} px-4`}  
+                    className={`${activeEduTab!=tab ? "" : "is-active has-text-weight-semibold px-2"} is-size-7-mobile px-2`}  
                     key={tab}
                     onClick={() => setEduTab(tab)}
                   >
@@ -109,14 +215,16 @@ export default function About() {
               { activeEduTab=='Awards' ? <Awards /> : null }
               { activeEduTab=='Extracurriculars' ? <Extracurr /> : null }
             </nav>
-            <nav className="panel is-warning column is-half mx-2">
+            </div>
+            <div className='column is-half-tablet'>
+            <nav className="panel is-warning ">
               <p className="panel-heading">
                 Skills
               </p>
               <p className="panel-tabs">
                 {skillsTabs.map((tab) => (
                   <a 
-                    className={`${activeSkillsTab!=tab ? "" : "is-active has-text-weight-semibold"} px-4`}  
+                    className={`${activeSkillsTab!=tab ? "" : "is-active has-text-weight-semibold px-2"} is-size-7-mobile px-2`}  
                     key={tab}
                     onClick={() => setSkillsTab(tab)}
                   >
@@ -131,6 +239,7 @@ export default function About() {
               { activeEduTab=='Tools' ? <Tools /> : null }
 
             </nav>
+            </div>
           </div>
         </main>
       </div>

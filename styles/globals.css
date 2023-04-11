@@ -14,12 +14,11 @@ body {
 
 main {
   z-index:1;
-  padding: 5rem 0;
+  padding: 2rem 0;
   display: flex;
-  min-width: 80%;
-  max-width: 100%;
-  min-height: 100vh;
+  width: 90%;
   height: fit-content;
+  min-height: 100%;
   margin-inline: 0;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,13 +34,21 @@ code {
 
 .page-container {
   height: fit-content;
+  min-height: calc(100vh - 100px);
   display: flex;
   width: 100vw;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding-inline: 5%;
   align-items: center;
   background-color: #fafafa;
+}
+
+.scroll-card {
+  height: fit-content;
+  max-height: 500px;
+  width: 100%;
+  overflow-y: auto;
 }
 
 a{

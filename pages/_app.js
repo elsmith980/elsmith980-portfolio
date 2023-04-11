@@ -7,8 +7,8 @@ function Application({ Component, pageProps }) {
   return (
     <>
       <Menu />
-      <Component {...pageProps} />
-      <Footer />
+      <Component {...pageProps}/>
+      <Footer></Footer>
     </>
   );
 }

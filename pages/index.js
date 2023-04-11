@@ -11,11 +11,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div style={{alignSelf: 'center', marginBottom: '2%', borderRadius: '300px', overflow: 'hidden', width: '300px', height: '300px', pointerEvents:'none'}}>
+        <div style={{alignSelf: 'center', marginBlock: '5%', borderRadius: '250px', overflow: 'hidden', width: '250px', height: '250px', pointerEvents:'none'}}>
           <Image
             src="/headshot.jpg"
-            width = "300"
-            height = "325"
+            width = "250"
+            height = "250"
             objectFit = "cover"
           />
         </div>
