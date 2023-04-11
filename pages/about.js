@@ -14,10 +14,12 @@ const DegreeInfo = () => (
         objectFit = "cover"
       />
     </figure>
-    <div className="has-text-left mr-auto pl-4"> 
+    <div className="has-text-left text-block mr-auto pl-4"> 
         <p className="is-size-6 has-text-weight-bold">Bachelor of Applied Science </p>
         <p className="is-size-6 has-text-weight-bold">Computer Engineering, Co-op</p>
+        <hr className="my-1"></hr>
         <p className="is-size-6">University of Waterloo</p>
+        <hr className="my-1"></hr>
         <p className="is-size-7 mt-3">Expected Graduation: June 2025</p>
         <p className="is-size-7">Average: ---</p>
     </div>            
@@ -145,7 +147,7 @@ const Awards = () => (
           Title
         </th>
         <th style={{width: '65%'}}>
-          Description
+          Awarded For
         </th>
       </tr>
       </thead>
@@ -158,7 +160,17 @@ const Awards = () => (
             Goulet Engineering Scholarship          
           </td>
           <td>
-            Awarded for academic achievement (minimum 80% cumulative average) combined with extracurricular and volunteer involvement. Preference is given to female students who have demonstrated involvement in activities aimed at promoting girls and women to pursue education and careers in STEM disciplines.
+            <ul>
+              <li>
+                Academic achievement (minimum 80% cumulative average)
+              </li>
+              <li>
+                Extracurricular and volunteer involvement
+              </li>
+              <li>
+                Demonstrated involvement in activities aimed at promoting girls and women to pursue education and careers in STEM
+              </li>
+            </ul>
           </td>
         </tr>
         <tr>
@@ -169,7 +181,17 @@ const Awards = () => (
             IESO Undergraduate Engineering Award          
           </td>
           <td>
-            Granted to a female undergraduate engineering student with demonstrated strong communication skills, leadership skills, involvement in extracurricular activities and maintained a minimum B average.         
+            <ul>
+              <li>
+                Female undergraduate engineering student with a minimum B average
+              </li>
+              <li>
+                Demonstrated strong communication & leadership skills             
+              </li>
+              <li>
+                Involvement in extracurricular activities
+              </li>
+            </ul>
           </td>
         </tr>
         <tr>
@@ -180,7 +202,7 @@ const Awards = () => (
             Dean's Honours List          
           </td>
           <td>
-            Awarded for achieving a 90% average while being in the top 10% of the class during the Winter 2021 term         
+            Achieving a 90% average while being in the top 10% of the class during the Winter 2021 term         
           </td>
         </tr>
         <tr>
@@ -191,7 +213,7 @@ const Awards = () => (
             President's Scholarship with Distinction
           </td>
           <td>
-            Awarded for receiving a graduating high school average of 95.0%
+            Graduating high school average of minimum 95.0%
           </td>
         </tr>
       </tbody>
@@ -200,22 +222,31 @@ const Awards = () => (
 )
 
 const Extracurr = () => (
-  <div className="panel-block my-4">
-    <div style={{width: '98%'}} className="columns mx-2 has-text-left is-tablet">
-      <div className="column is-half">
-            <div className="has-text-weight-bold">Women in Engineering USC</div>
-            <hr className="my-2"></hr>
-            <div>Co-President: May 2023 - Present</div>
-            <div>VP Internal: Jan 2022 - Apr 2023</div>
-            <div>Socials Director: Jan 2021 - Dec 2021</div>
-
+  <div className="panel-block my-3">
+    <div style={{width: '100%', height: 'fit-content'}} className="columns is-size-7 mx-2 has-text-left is-desktop">
+      <div className="column is-half-desktop">
+        <div className="has-text-weight-bold is-size-6">Women in Engineering USC</div>
+        <hr className="my-2"></hr>
+        <p className="block">
+          <span className="is-pulled-left has-text-left">Co-President</span>
+          <span className="is-pulled-right has-text-right">May 2023 - Present</span>
+        </p>
+        <p className="block ">
+          <span className="is-pulled-left has-text-left">VP Internal</span>
+          <span className="is-pulled-right has-text-right">Jan 2022 - Apr 2023</span>
+        </p>
+        <p className="block">
+          <span className="is-pulled-left has-text-left">Socials Director </span>
+          <span className="is-pulled-right has-text-right">Jan 2021 - Dec 2021</span>
+        </p>
       </div>
-      <div className="column is-half">
-            <div className="has-text-weight-bold">
-              Intramurals
-            </div> 
-            <hr className="my-2"></hr>
-            <div>Volleyball, Ultimate Frisbee, Soccer</div>
+      <hr className="is-mobile is-tablet my-2"></hr>
+      <div className="column is-half-desktop">
+        <div className="has-text-weight-bold is-size-6">
+          Intramurals
+        </div> 
+        <hr className="my-2"></hr>
+        <div>Volleyball, Ultimate Frisbee, Soccer</div>
 
       </div>
     </div>
@@ -272,10 +303,10 @@ export default function About() {
           <div className="columns is-centered is-tablet" >
             <div className="column is-half-tablet">
             <nav className="panel is-warning scroll-card ">
-              <p className="panel-heading">
+              <div className="panel-heading">
                 Education
-              </p>
-              <p className="panel-tabs">
+              </div>
+              <div className="panel-tabs">
                 {educationTabs.map((tab) => (
                   <a 
                     className={`${activeEduTab!=tab ? "" : "is-active has-text-weight-semibold px-2"} is-size-7-mobile px-2`}  
@@ -285,7 +316,7 @@ export default function About() {
                     {tab}
                   </a>
                 ))}
-              </p>
+              </div>
 
               { activeEduTab=='Degree' ? <DegreeInfo /> : null }
               { activeEduTab=='Courses' ? <Courses /> : null }
@@ -295,10 +326,10 @@ export default function About() {
             </div>
             <div className='column is-half-tablet'>
             <nav className="panel is-warning ">
-              <p className="panel-heading">
+              <div className="panel-heading">
                 Skills
-              </p>
-              <p className="panel-tabs">
+              </div>
+              <div className="panel-tabs">
                 {skillsTabs.map((tab) => (
                   <a 
                     className={`${activeSkillsTab!=tab ? "" : "is-active has-text-weight-semibold px-2"} is-size-7-mobile px-2`}  
@@ -308,7 +339,7 @@ export default function About() {
                     {tab}
                   </a>
                 ))}
-              </p>
+              </div>
 
               { activeSkillsTab=='General' ? <General /> : null }
               { activeSkillsTab=='Languages' ? <Languages /> : null }
