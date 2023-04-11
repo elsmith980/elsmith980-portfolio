@@ -16,7 +16,7 @@ const DegreeInfo = () => (
     </figure>
     <div className="has-text-left mr-auto pl-4"> 
         <p className="is-size-6 has-text-weight-bold">Bachelor of Applied Science </p>
-        <p className="is-size-6 has-text-weight-bold">Honours Computer Engineering, Co-op</p>
+        <p className="is-size-6 has-text-weight-bold">Computer Engineering, Co-op</p>
         <p className="is-size-6">University of Waterloo</p>
         <p className="is-size-7 mt-3">Expected Graduation: June 2025</p>
         <p className="is-size-7">Average: ---</p>
@@ -25,14 +25,14 @@ const DegreeInfo = () => (
 )
 
 const Courses = () => (
-  <div className="panel-block mb-3">
-    <table class="table has-text-left is-fullwidth is-narrow is-size-7" style={{backgroundColor: 'transparent', width: '100%', tableLayout:'fixed', height: 'fit-content'}}>
+  <div className="panel-block">
+    <table class="table has-text-left is-fullwidth is-size-7" style={{backgroundColor: 'transparent', width: '100%', tableLayout:'fixed'}}>
       <thead>
         <tr>
         <th> 
           Code
         </th>
-        <th style={{width: '25%'}}>
+        <th style={{width: '30%'}}>
           Title
         </th>
         <th style={{width: '60%'}}>
@@ -46,7 +46,7 @@ const Courses = () => (
             ECE 108, 208
           </td>
           <td>
-            Discrete Math and Logic I, II
+            Discrete Math & Logic I, II
           </td>
           <td>
             <ul>
@@ -91,7 +91,7 @@ const Courses = () => (
             ECE 250
           </td>
           <td>
-            Algorithms and Data Structures
+            Algorithms & Data Structures
           </td>
           <td>
             <ul>
@@ -109,7 +109,7 @@ const Courses = () => (
             ECE 252
           </td>
           <td>
-            Systems Programming and Concurrency
+            Systems Programming & Concurrency
           </td>
           <td>
             <ul>
@@ -117,7 +117,7 @@ const Courses = () => (
                 Processes and threads, system calls
               </li>
               <li>
-                Concurrency (semaphore, mutex, monitors, and barrier synchronization)
+                Concurrency (semaphore, mutex, monitors, barrier synchronization)
               </li>
               <li>
                 User-level memory management
@@ -134,14 +134,91 @@ const Courses = () => (
 )
 
 const Awards = () => (
-  <div className="panel-block my-4">
-    Awards
-  </div>
+  <div className="panel-block">
+    <table class="table has-text-left is-fullwidth is-size-7" style={{backgroundColor: 'transparent', width: '100%', tableLayout:'fixed'}}>
+      <thead>
+        <tr>
+        <th> 
+          Year
+        </th>
+        <th style={{width: '25%'}}>
+          Title
+        </th>
+        <th style={{width: '65%'}}>
+          Description
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Nov 2022
+          </td>
+          <td>
+            Goulet Engineering Scholarship          
+          </td>
+          <td>
+            Awarded for academic achievement (minimum 80% cumulative average) combined with extracurricular and volunteer involvement. Preference is given to female students who have demonstrated involvement in activities aimed at promoting girls and women to pursue education and careers in STEM disciplines.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Nov 2021
+          </td>
+          <td>
+            IESO Undergraduate Engineering Award          
+          </td>
+          <td>
+            Granted to a female undergraduate engineering student with demonstrated strong communication skills, leadership skills, involvement in extracurricular activities and maintained a minimum B average.         
+          </td>
+        </tr>
+        <tr>
+          <td>
+            June 2021
+          </td>
+          <td>
+            Dean's Honours List          
+          </td>
+          <td>
+            Awarded for achieving a 90% average while being in the top 10% of the class during the Winter 2021 term         
+          </td>
+        </tr>
+        <tr>
+          <td>
+            June 2019
+          </td>
+          <td>
+            President's Scholarship with Distinction
+          </td>
+          <td>
+            Awarded for receiving a graduating high school average of 95.0%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>  
 )
 
 const Extracurr = () => (
   <div className="panel-block my-4">
-    Extracurriculars
+    <div style={{width: '98%'}} className="columns mx-2 has-text-left is-tablet">
+      <div className="column is-half">
+            <div className="has-text-weight-bold">Women in Engineering USC</div>
+            <hr className="my-2"></hr>
+            <div>Co-President: May 2023 - Present</div>
+            <div>VP Internal: Jan 2022 - Apr 2023</div>
+            <div>Socials Director: Jan 2021 - Dec 2021</div>
+
+      </div>
+      <div className="column is-half">
+            <div className="has-text-weight-bold">
+              Intramurals
+            </div> 
+            <hr className="my-2"></hr>
+            <div>Volleyball, Ultimate Frisbee, Soccer</div>
+
+      </div>
+    </div>
   </div>
 )
 
